@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Center</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add FontAwesome for social icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Gradient background for the whole page */
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(45deg, #d4e6f1, #a8c6eb);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Navbar styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav .logo {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+        position: relative;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://via.placeholder.com/1500x800");
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        color: #fff;
+        text-align: center;
+        padding: 40px;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      .services,
+      .contact {
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .services ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 30px;
+        list-style: none;
+      }
+
+      .services ul li {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .services ul li:hover {
+        transform: translateY(-10px);
+      }
+
+      .services ul li img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      /* Contact Section */
+      .contact form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact form input,
+      .contact form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      .contact form button {
+        padding: 12px 30px;
+        border: none;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .contact form button:hover {
+        background-color: #45a049;
+      }
+
+      /* Add login/register links */
+      nav ul li a.login-register {
+        font-weight: 600;
+      }
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin-bottom: 30px;
+      }
+
+      .footer-left {
+        width: 50%;
+      }
+
+      .footer-left h3 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .footer-left p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .social-links {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links li {
+        font-size: 20px;
+      }
+
+      .social-links li a {
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease;
+      }
+
+      .social-links li a:hover {
+        color: #4caf50;
+      }
+
+      .footer-right {
+        width: 40%;
+      }
+
+      .footer-right h3 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .footer-right p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 14px;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+      }
+
+      /* Social Media Icon Styling */
+      .fab {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <div class="logo">Wellness Center</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="login.html" class="login-register">Login</a></li>
+          <li><a href="register.html" class="login-register">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <div class="hero">
+        <div>
+          <h1>Welcome to Our Wellness Center</h1>
+          <p>Your health, our priority</p>
+        </div>
+      </div>
+
+      <!-- Services and Contact sections will remain unchanged -->
+    </main>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>Wellness Center</h3>
+          <p>
+            Your health, our priority. Contact us for more information about our
+            services, or visit us for a relaxing experience.
+          </p>
+          <ul class="social-links">
+            <li>
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <h3>Contact Us</h3>
+          <p>Email: info@wellnesscenter.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 123 Wellness St, Health City, HC 4567</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Wellness Center. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
